@@ -2,7 +2,7 @@
 #create health check
 
 
-resource "google_compute_health_check" "healthcheck" {
+resource "google_compute_region_health_check" "healthcheck" {
   name                = "healthcheck"
   check_interval_sec  = 5
   timeout_sec         = 5

@@ -22,7 +22,7 @@ resource "google_compute_region_backend_service" "lb-backend-service" {
   load_balancing_scheme = "EXTERNAL_MANAGED"
   port_name             = "web"
   backend {
-    group           = google_compute_instance_group_manager.manageinstance1.instance_group
+    group           = google_compute_region_instance_group_manager.manageinstance1.instance_group
     capacity_scaler = 1.0
     balancing_mode  = "UTILIZATION"
   }

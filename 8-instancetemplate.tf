@@ -1,6 +1,6 @@
 
 
-resource "google_compute_instance_template" "test-template-1" {
+resource "google_compute_region_instance_template" "test-template-1" {
   name         = "test-template-1"
   machine_type = "n2-standard-2"
 

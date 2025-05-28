@@ -1,15 +1,22 @@
 # create manage instance group
 # implement lifecycle to prevent recreation of an existing managed group. 
+data "google_compute_zones" "available"{
+  status = "UP"
+}
 
-
-resource "google_compute_instance_group_manager" "manageinstance1" {
+resource "google_compute_region_instance_group_manager" "manageinstance1" {
   name = "manageinstance1"
 
   base_instance_name = "mig-1"
-  zone               = "us-central1-a"
+  region               = "us-central1"
+
+
+  distribution_policy_zones = data.google_compute_zones.available.names
+
+
 
   version {
-    instance_template  = google_compute_instance_template.test-template-1.self_link_unique
+    instance_template  = google_compute_region_instance_template.test-template-1.id
   }
 
   
@@ -20,7 +27,7 @@ resource "google_compute_instance_group_manager" "manageinstance1" {
   }
 
   auto_healing_policies {
-    health_check      = google_compute_health_check.healthcheck.id
+    health_check      = google_compute_region_health_check.healthcheck.id
     initial_delay_sec = 300
   }
 }
