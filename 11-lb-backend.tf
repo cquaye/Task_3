@@ -16,15 +16,16 @@ resource "google_compute_region_health_check" "lb-health-check" {
 
 # Create backend service "backend"
 resource "google_compute_region_backend_service" "lb-backend-service" {
-  name          = "lb-backend-service"
-  health_checks = [google_compute_region_health_check.lb-health-check.id]
+  name                  = var.backend_name
+  region                = var.region
+  health_checks         = [google_compute_region_health_check.lb-health-check.id]
   protocol              = "HTTP"
-  load_balancing_scheme = "EXTERNAL_MANAGED"
+  load_balancing_scheme = "INTERNAL_MANAGED"
   port_name             = "web"
   backend {
-    group           = google_compute_region_instance_group_manager.manageinstance1.instance_group
-    capacity_scaler = 1.0
-    balancing_mode  = "UTILIZATION"
+    group               = google_compute_region_instance_group_manager.linux_mig.instance_group
+    capacity_scaler     = 1.0
+    balancing_mode      = "UTILIZATION"
   }
 }
 

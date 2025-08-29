@@ -1,9 +1,9 @@
 # https://www.terraform.io/language/settings/backends/gcs
 terraform {
   backend "gcs" {
-    bucket      = "southpawstate-01"
+    bucket      = "southpawstate-02"
     prefix      = "terraform/state"
-    credentials = "*"
+    credentials = "dusty-class-6-5-carlton-quaye-02096ed33190.json"
   }
   required_providers {
     google = {
