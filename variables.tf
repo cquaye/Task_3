@@ -155,6 +155,12 @@ variable "http_proxy_name" {
   
 }
 
+variable "forwarding_name" {
+    type = string
+    default = "lb-forwarding-rule"
+  
+}
+
 # windows server variables
 
 variable "windows_name" {
