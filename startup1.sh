@@ -1,4 +1,4 @@
-#Thanks to Remo
+
 #!/bin/bash
 # Update and install Apache2
 apt update
