@@ -6,7 +6,7 @@
 
 variable "project_id" {
     type    = string
-    default = "dusty-class-6-5-carlton-quaye"
+    default = <your-project-id>
   
 }
 
@@ -18,7 +18,7 @@ variable "region" {
 
 variable "creds" {
     type    = string
-    default = "dusty-class-6-5-carlton-quaye-02096ed33190.json"
+    default = <your-creds>
   
 }
 
