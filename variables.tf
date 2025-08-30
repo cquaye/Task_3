@@ -6,7 +6,7 @@
 
 variable "project_id" {
     type    = string
-    default = <your-project-id>
+    default = "*"
   
 }
 
@@ -18,7 +18,7 @@ variable "region" {
 
 variable "creds" {
     type    = string
-    default = <your-creds>
+    default = "*"
   
 }
 
@@ -103,7 +103,7 @@ variable "base_instance_name" {
 }
 
 
-# instance temlate variables
+# instance template variables
 variable "template_name" {
     type    = string
     default = "linux-backend"

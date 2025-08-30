@@ -8,7 +8,7 @@ resource "google_compute_instance_template" "linux-template" {
   tags = [ "carlton" ]
 
   disk {
-    source_image         = "debian-cloud/debian-12"
+    source_image         = var.linux_image
     auto_delete          = true
     disk_size_gb         = 100
     boot                 = true

@@ -16,7 +16,7 @@ resource "google_compute_router_nat" "iowanat" {
 
 # https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_address
 resource "google_compute_address" "iowanat" {
-  name                               = "iowanat"
+  name                               = var.nat_name
   address_type                       = "EXTERNAL"
   network_tier                       = "PREMIUM"
   region                             = var.region

@@ -17,7 +17,7 @@ resource "google_compute_region_target_http_proxy" "lb-http-proxy" {
 # Create forwarding lb "Frontend"
 resource "google_compute_forwarding_rule" "lb-forwarding" {
   name                  = var.forwarding_name
-  region                = "us-central1"
+  region                = var.region
   target                = google_compute_region_target_http_proxy.lb-http-proxy.id
   port_range            = "80"
   ip_protocol           = "TCP"

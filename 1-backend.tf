@@ -3,7 +3,7 @@ terraform {
   backend "gcs" {
     bucket      = "southpawstate-02"
     prefix      = "terraform/state"
-    credentials = <your-creds >
+    credentials = "*"
   }
   required_providers {
     google = {
