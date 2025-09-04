@@ -55,7 +55,7 @@ This guide walks through deploying an Internal Load Balancer (ILB), a Windows VM
 
 ## Define your Windows server
 - One of the final steps is to create your windows machine. 
- - This is only way to reach your linux vm and the jumpbox for your team memmber to reach your environment. 
+ - This is the only way to reach your linux vm and the jumpbox for your team memmber to reach your environment. 
  - Be sure to apply your network tags to this machine so the firewall can allow traffic. 
 
 
