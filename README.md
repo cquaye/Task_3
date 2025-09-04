@@ -84,5 +84,5 @@ This guide walks through deploying an Internal Load Balancer (ILB), a Windows VM
 
 ## Deliverables
 - Each member of the group should have these items:
-    [ ] Screen shot list of everey member of the groups Windows external IP and linux internal IP
-    [ ] Screen shot of access into each members VM and the Web page of each linux web server. 
+    - [ ] Screen shot list of everey member of the groups Windows external IP and linux internal IP
+    - [ ] Screen shot of access into each members VM and the Web page of each linux web server. 
